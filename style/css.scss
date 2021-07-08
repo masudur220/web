@@ -1,0 +1,173 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-size: 16px; font-family: Arial, Helvetica, sans-serif}
+
+$hfBgColor: wheat;
+$NavColor:grey;
+$NavActive: green;
+$NavStyle: bold;
+
+@mixin cont {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@mixin  border{
+    border: 1px solid grey;
+    font-size: 25px;
+  }
+
+ @mixin boxShadow {
+    box-shadow: 2px 2px 3px grey;
+  }
+
+  @mixin cardA {
+    width: 250px;
+    height: 320px;
+    box-shadow: 2px 2px 4px grey;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+  }
+
+
+  @mixin cardFoot {
+    width: 320px;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+  }
+
+  @mixin logo {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    background-color: grey;
+    border-radius: 10px;
+  }
+
+
+  .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: grey;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 5px;
+    line-height: 1.0em;
+    margin-right: 20px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px grey;
+  }
+  .logo:hover{
+      color: grey;
+      background-color: white;
+  }
+  
+
+  .NavFont{color: $NavColor; font-weight: $NavStyle;}
+  .inActive{color: $NavActive;}
+
+header {
+    background-color: $hfBgColor;
+    @include border();
+    @include boxShadow();
+    width: 100%;
+    position:fixed;
+
+    nav{
+      @include cont();
+      
+      .NavbarM{margin-left: 30%}
+
+    }
+
+
+
+}
+
+main{
+   @include cont();
+
+   h2{
+     background-color: $hfBgColor;
+     padding: 5px 20px;
+     border-radius: 5px;
+     margin-top: 30px
+   }
+   
+div .Card{
+  @include cardA();
+  background-image: url(/imgs/card/book_PNG2105.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+
+  .Card:hover{
+    box-shadow: 8px 8px 10px grey;
+  }
+
+  h3{
+    text-align: center;
+    margin-top: 78%;
+    color: black;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 10px;
+    height: 70px;
+    background-color: transparent;
+  }
+  p{
+    text-align: right;
+    margin-right: 10px;
+    color: grey;
+    font-size: x-small;
+    margin-bottom: 10px;
+
+  }
+  input{
+    margin: auto 15%;
+    padding: 3px 15px;
+    background-color: $hfBgColor;
+    border: none;
+    color: green;
+    font-weight: bold;
+    width: 70%;
+    margin-bottom: 5px;
+    
+
+  }
+  input:hover{background-color: green; color: white;}
+}
+}
+
+
+footer{
+  background-color: $hfBgColor;
+  @include border();
+  >div{
+    @include cont();
+    .col{
+          @include cardFoot();
+          h5{
+            text-align: center;
+            margin: 5px 0;
+            font-weight: bold;
+          }
+          a{
+            margin:2px 30px ;
+            color: grey;
+            font-weight: bold;
+            text-decoration: none;
+          }
+          a:hover{
+            text-decoration: underline;
+          }
+    }
+    
+  }
+}
+

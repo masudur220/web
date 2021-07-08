@@ -1,0 +1,81 @@
+// slider 
+aside{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+    top: 50px;
+}
+#slideshow > div {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+#slideshow .item{
+    height: 500px;
+    width: 100%;
+
+}
+#slideshow > div > div{position: absolute;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    top: 100px;
+    left: 150px;
+}
+#slideshow > div > div h1{
+    color: tomato;
+    font-size: 3.5em;
+    text-shadow: 3px 4px 5px white;
+}
+#slideshow > div > div h2{color: black;
+    text-shadow: 2px 2px 3px white;
+}
+
+// for mobile responsive 
+@media screen and(max-width: 650px) {
+    aside{
+        height: 300px;
+    }
+    #slideshow .item{
+        height: 300px;
+    }
+    #slideshow > div > div{position: absolute;
+        text-align: center;
+        padding: 20px;
+        top: 20%;
+        left: 8%;
+    }
+    #slideshow > div > div h1{
+        color: tomato;
+        font-size: 2.0em;
+        text-shadow: 3px 4px 5px white;
+    }
+    #slideshow > div > div h2{color: black;
+        text-shadow: 2px 2px 3px white;
+    }
+}
+
+// for mobile responsive 
+@media screen and(max-width: 800px) {
+    aside{
+        height: 400px;
+    }
+    #slideshow .item{
+        height: 400px;
+    }
+    #slideshow > div > div{position: absolute;
+        text-align: center;
+        padding: 20px;
+        top: 20%;
+        left: 8%;
+    }
+    #slideshow > div > div h1{
+        color: tomato;
+        font-size: 3.0em;
+        text-shadow: 3px 4px 5px white;
+    }
+    #slideshow > div > div h2{color: black;
+        text-shadow: 2px 2px 3px white;
+    }
+}
